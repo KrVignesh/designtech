@@ -696,3 +696,15 @@ body.mobile-nav-active #mobile-nav-toggle {
     transition: 0.4s;
     cursor: pointer;
 }
+
+#contact #gmapFrame {
+    width: 400px;
+    height: 350px;
+}
+
+@media (max-width: 768px) {
+    #contact #gmapFrame {
+        width: 330px;
+        height: 350px;
+    }
+}
