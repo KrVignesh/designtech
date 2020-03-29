@@ -15,7 +15,6 @@
 
     <!-- <link href="./assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="./assets/lib/animate/animate.min.css" rel="stylesheet">
-    <link href="./assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
 
     <!-- Main Stylesheet File -->
     <link href="./assets/css/style.css" rel="stylesheet">
@@ -31,11 +30,7 @@
                 <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
             </div>
             <nav id="nav-menu-container">
-                <ul class="nav-menu" id="nav">
-                    <li style="display: none;"><a href="#intro">Home</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Projects</a></li>
-                    <li><a href="#testimonials">Reviews</a></li>
+                <ul class="nav-menu">
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -94,177 +89,63 @@
         </div>
     </section>
 
-    <section id="services">
-        <div class="container mt-5">
-
-            <header class="section-header wow fadeInUp">
+    <section id="team">
+        <div class="container">
+            <div class="section-header wow fadeInUp">
                 <h3>Services</h3>
                 <p>We take pride in offering you a variety of options to make your interiors practical, functional, and
                     impressive. We also pride ourselves in offering you competitive rates that beat our competition and
                     we refuse to cut corners in the carpentry, finishing or assembly of your interiors.</p>
-            </header>
+            </div>
 
             <div class="row">
 
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="icon mb-1"><i class="fas fa-building"></i></div>
-                    <h4 class="title"><a href="">Corporate Interior</a></h4>
-                    <!-- <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi
-                        sint occaecati cupiditate non provident</p> -->
-                    <ul class="mt-2">
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Office False Ceilings</li>
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Office Cabins & Partitions</li>
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Office Furnitures</li>
-                    </ul>
+                <div class="col-lg-4 wow fadeInUp">
+                    <div class="member">
+                        <img src="./assets/img/services/corp_sm.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <ul class="serviceLists">
+                                <li>Office False Ceilings</li>
+                                <li>Office Cabins & Partitions</li>
+                                <li>Office Furnitures</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 class="title">Corporate Interior</h4>
                 </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="icon mb-1"><i class="fas fa-warehouse"></i></div>
-                    <h4 class="title"><a href="">Commercial Interior</a></h4>
-                    <!-- <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat tarad limino ata</p> -->
-                    <ul class="mt-2">
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Showrooms</li>
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Restaurants</li>
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Studios</li>
-                    </ul>
+
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="member">
+                        <img src="./assets/img/services/shop_sm.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <ul class="serviceLists">
+                                <li>Showrooms</li>
+                                <li>Restaurants</li>
+                                <li>Studios</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 class="title">Commercial Interior</h4>
                 </div>
-                <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
-                    <div class="icon mb-1"><i class="fas fa-home"></i></div>
-                    <h4 class="title"><a href="">Home Interior</a></h4>
-                    <!-- <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
-                        eu fugiat nulla pariatur</p> -->
-                    <ul class="mt-2">
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Modular Kitchens</li>
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Wardrobes & Lofts</li>
-                        <li><i class="fas fa-long-arrow-alt-right"></i> Bedroom Interiors</li>
-                    </ul>
+
+                <div class="col-lg-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="member">
+                        <img src="./assets/img/services/home_sm.jpg" class="img-fluid" alt="">
+                        <div class="member-info">
+                            <ul class="serviceLists">
+                                <li>Modular Kitchens</li>
+                                <li>Wardrobes & Lofts</li>
+                                <li>Bedroom Interiors</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <h4 class="title">Home Interior</h4>
                 </div>
+
             </div>
 
         </div>
     </section>
-
-    <section id="portfolio" class="section-bg">
-        <div class="container">
-
-            <header class="section-header">
-                <h3 class="section-title">Our Projects</h3>
-            </header>
-
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul id="portfolio-flters">
-                        <li data-filter="*" class="filter-active">All</li>
-                        <li data-filter=".filter-home">Home</li>
-                        <li data-filter=".filter-commercial">Commercial</li>
-                        <li data-filter=".filter-corp">Corporate</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row portfolio-container">
-                <div class="col-lg-4 col-md-6 portfolio-item filter-home wow fadeInUp">
-                    <div class="portfolio-wrap">
-                        <figure>
-                            <img style="height: inherit;" src="./assets/img/projects/home.jpg" class="img-fluid" alt="">
-                        </figure>
-
-                        <div class="portfolio-info">
-                            <h4><a href="#">Navin Home</a></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-home wow fadeInUp">
-                    <div class="portfolio-wrap">
-                        <figure>
-                            <img style="height: inherit;" src="./assets/img/projects/home2.jpg" class="img-fluid" alt="">
-                        </figure>
-
-                        <div class="portfolio-info">
-                            <h4><a href="#">James Home</a></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-commercial wow fadeInUp">
-                    <div class="portfolio-wrap">
-                        <figure>
-                            <img style="height: inherit;" src="./assets/img/projects/studios.jpg" class="img-fluid" alt="">
-                        </figure>
-
-                        <div class="portfolio-info">
-                            <h4><a href="#">Design Tech Studios</a></h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 portfolio-item filter-corp wow fadeInUp">
-                    <div class="portfolio-wrap">
-                        <figure>
-                            <img style="height: inherit;" src="./assets/img/projects/office.jpg" class="img-fluid" alt="">
-                        </figure>
-
-                        <div class="portfolio-info">
-                            <h4><a href="#">DT Office</a></h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <section id="testimonials" class="section-bg wow fadeInUp">
-        <div class="container">
-
-            <header class="section-header">
-                <h3>Reviews</h3>
-            </header>
-
-            <div class="owl-carousel testimonials-carousel">
-
-                <div class="testimonial-item">
-                    <img src="./assets/img/reviews/nav.jpg" class="testimonial-img" alt="">
-                    <h3>Navin</h3>
-                    <h4>Ceo &amp; Founder</h4>
-                    <p>
-                        <img src="./assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                        Loved how the designed turned out and appreciated all the extra communication that occurred from
-                        my designer. Will use again.
-                        <img src="./assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
-                    </p>
-                </div>
-
-                <div class="testimonial-item">
-                    <img src="./assets/img/reviews/nav.jpg" class="testimonial-img" alt="">
-                    <h3>James</h3>
-                    <h4>Designer</h4>
-                    <p>
-                        <img src="./assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                        I loved the process of designing my dining room with my designer. I’m so excited to order and
-                        get everything set-up!
-                        <img src="./assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
-                    </p>
-                </div>
-
-                <div class="testimonial-item">
-                    <img src="./assets/img/reviews/nav.jpg" class="testimonial-img" alt="">
-                    <h3>Nathan</h3>
-                    <h4>Store Owner</h4>
-                    <p>
-                        <img src="./assets/img/quote-sign-left.png" class="quote-sign-left" alt="">
-                        Excellent experience - designer was very responsive and paid attention to my style and budget.
-                        <img src="./assets/img/quote-sign-right.png" class="quote-sign-right" alt="">
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5"><button type="button" class=" btn btn-large btn-outline-dark">View More</button>
-        </div>
-    </section>
-
-
 
     <section id="contact" class="section-bg wow fadeInUp">
         <div class="container">
@@ -336,7 +217,7 @@
                                     data-msg="Please write something for us" placeholder="Message"></textarea>
                                 <div class="validation"></div>
                             </div>
-                            <div class="text-center"><button type="button" class="btn btn-large btn-outline-dark">Send
+                            <div class="text-center"><button type="button" class="btn-outline-dark">Send
                                     Message</button></div>
                         </form>
                     </div>
@@ -362,16 +243,9 @@
     <script src="./assets/lib/owlcarousel/owl.carousel.min.js"></script>
     <script src="./assets/lib/isotope/isotope.pkgd.min.js"></script>
     <script src="./assets/lib/touchSwipe/jquery.touchSwipe.min.js"></script>
-    <script src="./assets/js/jquery.nav.js"></script>
 
     <!-- Template Main Javascript File -->
     <script src="./assets/js/main.js"></script>
-
-    <script>
-        $(document).ready(function () {
-            $('#nav').onePageNav();
-        });
-    </script>
 
 </body>
 
