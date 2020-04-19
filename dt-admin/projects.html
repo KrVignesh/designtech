@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Language" content="en" />
+    <meta name="msapplication-TileColor" content="#2d89ef">
+    <meta name="theme-color" content="#4188c9">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico" />
+    <title>DTAdmin | </title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/plugins/dropify/css/dropify.css">
+    <script src="./assets/plugins/dropify/js/dropify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script>
+        $(document).ready(function () {
+            $('.dropify').dropify();
+        });
+    </script>
+    <script src="./assets/js/require.min.js"></script>
+    <script>
+        requirejs.config({
+            baseUrl: '.'
+        });
+    </script>
+    <!-- Dashboard Core -->
+    <link href="./assets/css/dashboard.css" rel="stylesheet" />
+    <script src="./assets/js/dashboard.js"></script>
+
+    <style>
+        .projectItem {
+            cursor: pointer !important;
+        }
+    </style>
+</head>
+
+<body class="">
+    <div class="page">
+        <div class="flex-fill">
+            <div class="header py-4">
+                <div class="container">
+                    <div class="d-flex">
+                        <a class="header-brand" href="./index.html">
+                            <img src="./assets/images/dt_logo.png" class="header-brand-img" alt="DesignTech">
+                        </a>
+                        <div class="d-flex order-lg-2 ml-auto">
+                            <div class="dropdown">
+                                <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
+                                    <span class="avatar"
+                                        style="background-image: url(./assets/images/avatar.png)"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <a class="dropdown-item" href="#" onclick="logout();">
+                                        <i class="dropdown-icon fe fe-log-out"></i> Sign out
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#" class="header-toggler d-lg-none ml-3 ml-lg-0" data-toggle="collapse"
+                            data-target="#headerMenuCollapse">
+                            <span class="header-toggler-icon"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="header collapse d-lg-flex p-0" id="headerMenuCollapse">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg order-lg-first">
+                            <ul class="nav nav-tabs border-0 flex-column flex-lg-row">
+                                <li class="nav-item">
+                                    <a href="./projects.html" class="nav-link active"><i class="fe fe-home"></i>
+                                        Projects</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./reviews.html" class="nav-link"><i class="fe fe-home"></i>
+                                        Reviews</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="./messages.html" class="nav-link"><i class="fe fe-home"></i> Messages</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="my-3 my-md-5">
+                <div class="container">
+                    <div class="page-header">
+                        <h1 class="page-title">
+                            Projects
+                        </h1>
+                        <div class="col-auto ml-auto">
+                            <div class="row align-items-center">
+                                <div class="col-auto">
+                                    <a href="#!" class="btn btn-outline-dark btn-sm" data-toggle="modal"
+                                        data-target="#addModal"><i class="fa fa-plus" aria-hidden="true"></i> Add
+                                        Project</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row row-cards row-deck" id="projectsContainer">
+                        <!-- <div class="col-sm-6 col-lg-4">
+                            <div class="card p-2">
+                                <a href="javascript:void(0)" class="mb-3">
+                                    <img src="./demo/photos/grant-ritchie-338179-500.jpg" alt="Photo by Nathan Guerrero"
+                                        class="rounded">
+
+                                    <div class="d-flex align-items-center">
+                                        <h4 class="mx-auto">Nathan Guerrero</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <form id="addProjectForm" method="POST" action="" enctype='multipart/form-data'>
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Add Project</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group col-md-12">
+                                                    <label for="name">Project Name</label>
+                                                    <input type="text" name="name" class="form-control" id="name"
+                                                        placeholder="Name" required>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label for="position">Project Category</label>
+                                                    <select id="category" class="form-control" name="category" required>
+                                                        <option value="home">Home</option>
+                                                        <option value="commercial">Commercial</option>
+                                                        <option value="corporate">Corporate</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label for="message">Project Description</label>
+                                                    <textarea id="description" name="description" class="form-control"
+                                                        cols="30" rows="3" required></textarea>
+                                                </div>
+                                                <div class="form-group col-md-12">
+                                                    <label for="message">Video URL</label>
+                                                    <input type="text" name="video" class="form-control" id="video"
+                                                        placeholder="URL" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="photo1">Photo 1</label>
+                                                        <input type="file" name="photo1" class="dropify" id="photo1"
+                                                            required />
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="photo2">Photo 2</label>
+                                                        <input type="file" name="photo2" class="dropify" id="photo2" />
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="photo3">Photo 3</label>
+                                                        <input type="file" name="photo3" class="dropify" id="photo3" />
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <label for="photo4">Photo 4</label>
+                                                        <input type="file" name="photo4" class="dropify" id="photo4" />
+                                                    </div>
+                                                </div>
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-primary">Add Project</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            var logged_in = localStorage.getItem("login_status");
+            if (logged_in != 'logged_in') {
+                window.location.href = "http://localhost/designTech/dt-admin/";
+            }
+            getProjects();
+
+            // Add new project
+            $("#addProjectForm").submit(function (e) {
+                e.preventDefault();
+                $input = $('<input type="hidden" name="reqType"/>').val('addProject');
+                $('#addProjectForm').append($input);
+                var form = $(this);
+                var form = new FormData($(this)[0]);
+                $.ajax({
+                    type: "POST",
+                    url: './db.php',
+                    data: form,
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    processData: false,
+                    success: function (data) {
+                        var result = JSON.parse(data);
+                        if (result['status'] == 'ERROR') {
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'error',
+                                title: result['message'],
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                        } else if (result['status'] == 'OK') {
+                            $('#addModal').modal('hide');
+                            $('.modal-backdrop').remove()
+                            Swal.fire({
+                                position: 'top-end',
+                                icon: 'success',
+                                title: 'Project added successfully.',
+                                showConfirmButton: false,
+                                timer: 1500
+                            });
+                            getProjects();
+
+                        }
+                    }
+                });
+            })
+        });
+
+        function logout() {
+            localStorage.clear();
+            window.location.href = 'http://localhost/designTech/dt-admin/';
+        }
+
+
+        // getProjects
+        function getProjects() {
+            $.ajax({
+                url: './db.php',
+                method: 'POST',
+                data: {
+                    reqType: "getProjects"
+                },
+                success: function (data) {
+                    if (data == '') {} else {
+                        $("#projectsContainer").empty();
+                        var json = JSON.parse(data);
+                        json.forEach(element => {
+                            console.log(element);
+                            $("#projectsContainer").append(
+                                '<div class="col-sm-6 col-lg-4 projectItem">' +
+                                '<div class="card p-2"' +
+                                '<a href="javascript:void(0)" class="mb-3" onclick="viewProject(' +
+                                element['id'] + ')">' +
+                                '<img src="' + element['image_1'] + '" class="rounded">' +
+                                '<div class="d-flex align-items-center">' +
+                                '<h4 class="mx-auto">' + element['project_name'] + '</h4>' +
+                                '</div>' +
+                                '</a>' +
+                                '</div>' +
+                                '</div>'
+                            );
+                        });
+                    }
+                }
+            });
+        }
+
+
+
+
+        function viewProject(id) {
+            window.location.href = "http://localhost/designTech/dt-admin/project-details.html?" + id;
+        }
+    </script>
+
+    <script src="./assets/js/require.min.js"></script>
+
+</body>
+
+</html>
