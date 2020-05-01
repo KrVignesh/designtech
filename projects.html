@@ -1,0 +1,254 @@
+	<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Projects | DesignTech</title>
+	    <meta name="description" content="DesignTech - Interior design consultancy and decorators.">
+	    <meta name="keywords" content="Interior designers, decorators, consultancy, technology, designers">
+	    <meta name="author" content="KrVigneshVictor">
+
+	    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	    <!-- Bootstrap CSS File -->
+	    <link href="./assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Main Stylesheet File -->
+	    <link href="./assets/css/style.css" rel="stylesheet">
+	    <link rel="stylesheet" href="./assets/css/main.css">
+
+	    <style>
+	        #header {
+	            background: rgba(0, 0, 0, 0.8);
+	            -webkit-backdrop-filter: saturate(100%) blur(10px);
+	            backdrop-filter: saturate(100%) blur(10px);
+	            padding: 10px 0;
+	            height: 60px;
+	            transition: all 0.5s;
+	        }
+
+	        .blog-area .owl-dots {
+	            text-align: center;
+	            bottom: 5px;
+	            margin-top: 70px;
+	            width: 100%;
+	            -webkit-backface-visibility: hidden;
+	            -moz-backface-visibility: hidden;
+	            -ms-backface-visibility: hidden;
+	            backface-visibility: hidden
+	        }
+
+	        .blog-area .owl-dot {
+	            height: 10px;
+	            width: 10px;
+	            display: inline-block;
+	            background: rgba(198, 176, 105, 0.2);
+	            margin-left: 5px;
+	            margin-right: 5px;
+	            -webkit-transition: all 0.3s ease 0s;
+	            -moz-transition: all 0.3s ease 0s;
+	            -o-transition: all 0.3s ease 0s;
+	            transition: all 0.3s ease 0s
+	        }
+
+	        .blog-area .owl-dot.active {
+	            -webkit-transition: all 0.3s ease 0s;
+	            -moz-transition: all 0.3s ease 0s;
+	            -o-transition: all 0.3s ease 0s;
+	            transition: all 0.3s ease 0s;
+	            background: #c6b069
+	        }
+
+
+	        .blog-area .single-blog-post .thumb img {
+	            border-radius: 10px
+	        }
+
+	        .blog-area .single-blog-post .tags {
+	            margin: 20px 0px
+	        }
+
+	        .blog-area .single-blog-post .tags li {
+	            display: inline-block;
+	            border: 1px solid #eee;
+	            padding: 4px 12px;
+	            -webkit-transition: all 0.3s ease 0s;
+	            -moz-transition: all 0.3s ease 0s;
+	            -o-transition: all 0.3s ease 0s;
+	            transition: all 0.3s ease 0s
+	        }
+
+	        .blog-area .single-blog-post .tags li:hover {
+	            background-color: #c6b069
+	        }
+
+	        .blog-area .single-blog-post .tags li:hover a {
+	            color: #fff
+	        }
+
+	        .blog-area .single-blog-post .tags li a {
+	            font-weight: 400;
+	            font-size: 12px;
+	            color: #222
+	        }
+
+	        .blog-area .single-blog-post .title {
+	            -webkit-transition: all 0.3s ease 0s;
+	            -moz-transition: all 0.3s ease 0s;
+	            -o-transition: all 0.3s ease 0s;
+	            transition: all 0.3s ease 0s;
+	            margin: 20px 0
+	        }
+
+	        .blog-area .single-blog-post .title:hover {
+	            color: #c6b069
+	        }
+
+	        .blog-area .single-blog-post .date {
+	            color: #222;
+	            font-weight: 300
+	        }
+
+	        @media (max-width: 575px) {
+	            .blog-area .single-blog-post {
+	                margin: 15px
+	            }
+	        }
+	    </style>
+	</head>
+
+	<body>
+	    <header id="header">
+	        <div class="container-fluid">
+
+	            <div id="logo" class="pull-left">
+	                <h1><a href="index.html" class="scrollto">Des<span class="redText">i</span>gnTech</a></h1>
+	                <!-- Uncomment below if you prefer to use an image logo -->
+	                <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+	            </div>
+	            <nav id="nav-menu-container">
+	                <ul class="nav-menu" id="nav">
+	                    <li style="display: none;"><a href="index.html#intro">Home</a></li>
+	                    <li><a href="index.html#team">Services</a></li>
+	                    <li><a href="index.html#portfolio">Projects</a></li>
+	                    <li><a href="index.html#testimonials">Reviews</a></li>
+	                    <li><a href="index.html#contact">Contact</a></li>
+	                </ul>
+	            </nav>
+	        </div>
+	    </header>
+
+	    <section class="banner-area relative" id="home">
+	        <div class="overlay overlay-bg"></div>
+	        <div class="container">
+	            <div class="row d-flex align-items-center justify-content-center">
+	                <div class="about-content col-lg-12">
+	                    <h1 class="text-white">
+	                        Some of our unique projects
+	                    </h1>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+
+	    <!-- start banner Area -->
+	    <section class="blog-area section-gap">
+	        <div class="container">
+	            <div class="row" id="projectsPageContainer">
+	                <!-- <div class="single-blog-post col-sm-4">
+	                    <div class="thumb">
+	                        <img class="img-fluid" src="assets\img\projects\home.jpg" alt="">
+	                    </div>
+	                    <div class="details">
+	                        <a href="#!">
+	                            <h4 class="title">Low Cost Advertising</h4>
+	                        </a>
+	                        <p>
+	                            Acres of Diamonds… you’ve read the famous story, or at least had it related to you. A
+	                            farmer.
+	                        </p>
+	                    </div>
+                    </div> -->
+	            </div>
+	        </div>
+	    </section>
+
+	    <!-- Start callto-action Area -->
+	    <section class="callto-action-area section-gap">
+	        <div class="container">
+	            <div class="row justify-content-center">
+	                <div class="callto-action-wrap col-lg-12 relative section-gap">
+	                    <div class="content">
+	                        <h1>
+	                            Looking for a <br>
+	                            quality and affordable interior design?
+	                        </h1>
+	                        <a href="index.html#contactForm" class="btn btn-large btn-dark text-uppercase mt-5">Contact us
+	                            now</a>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+
+	    <div id="whatsappContainer">
+	        <a href="https://wa.me/917708551525?text=hi" target="_blank"><img src="./assets/img/WhatsApp1.png"
+	                onmouseover="this.src='./assets/img/WhatsApp2.png'" onmouseout="this.src='./assets/img/WhatsApp1.png'"
+	                alt="WhatsApp Logo"></a>
+	    </div>
+
+
+	    <script src="./assets/lib/jquery/jquery.min.js"></script>
+
+
+	    <script>
+	        $(document).ready(function () {
+	            getProjects()
+	        });
+	    </script>
+
+	    <script>
+	        function getProjects() {
+	            $.ajax({
+	                url: './contact.php',
+	                method: 'POST',
+	                data: {
+	                    reqType: "getProjects"
+	                },
+	                success: function (data) {
+	                    console.log(data);
+	                    if (data == '') {} else {
+	                        $("#projectsPageContainer").empty();
+	                        var json = JSON.parse(data);
+	                        json.forEach(element => {
+	                            console.log(element);
+	                            $("#projectsPageContainer").append(
+	                                '<div class="single-blog-post col-sm-4" style="cursor:pointer;" onclick="openProjDetails(' +
+	                                element['id'] + ')">' +
+	                                '<div class="thumb">' +
+	                                '<img class="img-fluid" src="' + element['image_1'] +
+	                                '" alt="">' +
+	                                '</div>' +
+	                                '<div class="details">' +
+	                                '<a href="#!">' +
+	                                '<h4 class="title">' + element['project_name'] + '</h4>' +
+	                                '</a>' +
+	                                '<p>' + element['project_description'] + '</p>' +
+	                                '</div>' +
+	                                '</div>'
+	                            );
+	                        });
+	                    }
+	                }
+	            });
+	        }
+
+
+	        function openProjDetails(id) {
+	            window.location.href = "project-details.html?" + id
+	        }
+	    </script>
+
+	</body>
+
+	</html>

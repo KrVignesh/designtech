@@ -12,7 +12,6 @@
     <!-- Bootstrap CSS File -->
     <link href="./assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-
     <!-- <link href="./assets/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet"> -->
     <link href="./assets/lib/animate/animate.min.css" rel="stylesheet">
     <link href="./assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
@@ -237,6 +236,9 @@
             </div>
 
         </div>
+
+        <div class="text-center mt-5"><button type="button" onclick="window.location.href='projects.html'" class=" btn btn-large btn-outline-dark">View More Projects</button>
+        </div>
     </section>
 
     <section id="testimonials" class="section-bg wow fadeInUp">
@@ -284,7 +286,7 @@
                 </div>
             </div>
         </div>
-        <div class="text-center mt-5"><button type="button" class=" btn btn-large btn-outline-dark">View More</button>
+        <div class="text-center mt-5"><button type="button" onclick="window.location.href='reviews.html'" class=" btn btn-large btn-outline-dark">See all reviews</button>
         </div>
     </section>
 
@@ -473,19 +475,19 @@
                         var json = JSON.parse(data);
                         json.forEach(element => {
                             console.log(element);
-                            $("#projectsContainer").append(
-                                '<div class="col-sm-6 col-lg-4 projectItem">' +
-                                '<div class="card p-2"' +
-                                '<a href="javascript:void(0)" class="mb-3" onclick="viewProject(' +
-                                element['id'] + ')">' +
-                                '<img src="' + element['image_1'] + '" class="rounded">' +
-                                '<div class="d-flex align-items-center">' +
-                                '<h4 class="mx-auto">' + element['project_name'] + '</h4>' +
-                                '</div>' +
-                                '</a>' +
-                                '</div>' +
-                                '</div>'
-                            );
+                            // $("#projectsContainer").append(
+                            //     '<div class="col-sm-6 col-lg-4 projectItem">' +
+                            //     '<div class="card p-2"' +
+                            //     '<a href="javascript:void(0)" class="mb-3" onclick="viewProject(' +
+                            //     element['id'] + ')">' +
+                            //     '<img src="' + element['image_1'] + '" class="rounded">' +
+                            //     '<div class="d-flex align-items-center">' +
+                            //     '<h4 class="mx-auto">' + element['project_name'] + '</h4>' +
+                            //     '</div>' +
+                            //     '</a>' +
+                            //     '</div>' +
+                            //     '</div>'
+                            // );
                         });
                     }
                 }

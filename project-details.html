@@ -1,0 +1,208 @@
+	<!DOCTYPE html>
+
+	<head>
+	    <meta charset="UTF-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <title>Project Details | DesignTech</title>
+	    <meta name="description" content="DesignTech - Interior design consultancy and decorators.">
+	    <meta name="keywords" content="Interior designers, decorators, consultancy, technology, designers">
+	    <meta name="author" content="KrVigneshVictor">
+
+	    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
+	    <!-- Bootstrap CSS File -->
+	    <link href="./assets/lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	    <!-- Main Stylesheet File -->
+	    <link href="./assets/css/style.css" rel="stylesheet">
+	    <link rel="stylesheet" href="./assets/css/main.css">
+	    <link href="./assets/lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+	    <style>
+	        #header {
+	            background: rgba(0, 0, 0, 0.8);
+	            -webkit-backdrop-filter: saturate(100%) blur(10px);
+	            backdrop-filter: saturate(100%) blur(10px);
+	            padding: 10px 0;
+	            height: 60px;
+	            transition: all 0.5s;
+	        }
+
+	        .about-video-left h6 {
+	            color: #c6b069;
+	            font-weight: 300;
+	            letter-spacing: 2px;
+	            font-size: 12px
+	        }
+
+	        .about-video-left h1 {
+	            padding: 20px 0
+	        }
+
+	        @media (max-width: 413px) {
+	            .about-video-left h1 br {
+	                display: none
+	            }
+	        }
+
+	        .about-video-left p {
+	            margin-bottom: 0px
+	        }
+
+	        .about-video-left p span {
+	            font-size: 16px;
+	            font-weight: 300;
+	            color: #222
+	        }
+
+	        .about-video-left .primary-btn {
+	            border-radius: 0;
+	            border: 1px solid transparent
+	        }
+
+	        .about-video-left .primary-btn:hover {
+	            background: transparent;
+	            border-color: #c6b069;
+	            color: #c6b069
+	        }
+	    </style>
+	</head>
+
+	<body>
+	    <header id="header">
+	        <div class="container-fluid">
+
+	            <div id="logo" class="pull-left">
+	                <h1><a href="index.html" class="scrollto">Des<span class="redText">i</span>gnTech</a></h1>
+	                <!-- Uncomment below if you prefer to use an image logo -->
+	                <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+	            </div>
+	            <nav id="nav-menu-container">
+	                <ul class="nav-menu" id="nav">
+	                    <li style="display: none;"><a href="index.html#intro">Home</a></li>
+	                    <li><a href="index.html#team">Services</a></li>
+	                    <li><a href="index.html#portfolio">Projects</a></li>
+	                    <li><a href="index.html#testimonials">Reviews</a></li>
+	                    <li><a href="index.html#contact">Contact</a></li>
+	                </ul>
+	            </nav>
+	        </div>
+	    </header>
+
+	    <section class="about-video-area section-gap">
+	        <div class="container">
+                <div class="row"><a href="./projects.html" class="btn btn-outline-dark">Back to Projects</a></div>
+	            <div class="row align-items-center">
+	                <div class="col-lg-6 about-video-left">
+	                    <!-- <h6 class="text-uppercase">Brand new app to blow your mind</h6> -->
+	                    <h1 id="projectName">
+	                        We’ve made a life <br>
+	                        that will change you
+	                    </h1>
+	                    <p id="projectDesc">
+	                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+	                        labore et dolore magna aliqua. Ut enim ad minim.
+	                    </p>
+	                </div>
+	                <div class="col-lg-6 about-video-right justify-content-center align-items-center d-flex relative">
+	                    <!-- <a class="play-btn" href="https://www.youtube.com/watch?v=ARA0AxrnHdM"><img
+                                class="img-fluid mx-auto" src="img/play-btn.png" alt=""></a> -->
+	                    <iframe width="100%" height="100%" id="projectVideo"
+	                        src="https://www.youtube.com/embed/rUWxSEwctFU" frameborder="0"
+	                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+	                        allowfullscreen></iframe>
+	                </div>
+	                <div class="col-sm-12 mt-5">
+
+	                    <div class="owl-carousel owl-theme">
+	                        <div id="img1Container"><img class="img1" src="" alt=""></div>
+	                        <div id="img2Container"><img class="img2" src="" alt=""></div>
+	                        <div id="img3Container"><img class="img3" src="" alt=""></div>
+	                        <div id="img4Container"><img class="img4" src="" alt=""></div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	    </section>
+
+	    <div id="whatsappContainer">
+	        <a href="https://wa.me/917708551525?text=hi" target="_blank"><img src="./assets/img/WhatsApp1.png"
+	                onmouseover="this.src='./assets/img/WhatsApp2.png'" onmouseout="this.src='./assets/img/WhatsApp1.png'"
+	                alt="WhatsApp Logo"></a>
+	    </div>
+
+
+	    <script src="./assets/lib/jquery/jquery.min.js"></script>
+
+	    <script>
+	        $(document).ready(function () {
+	            getSingleProjects()
+	        });
+	    </script>
+
+	    <script>
+	        function getSingleProjects() {
+	            var id = window.location.search.substring(1);
+	            $.ajax({
+	                url: './dt-admin/db.php',
+	                method: 'POST',
+	                data: {
+	                    reqType: "getSingleProjects",
+	                    projectId: id
+	                },
+	                success: function (data) {
+	                    if (data == '') {} else {
+	                        var json = JSON.parse(data);
+
+	                        var result = json[0];
+	                        $('#projectName').text(result['project_name']);
+	                        $('#projectDesc').text(result['project_description']);
+	                        $('#projectVideo').attr('src', result['video_url']);
+	                        if (result['image_1'] != '') {
+	                            $(".img1").attr('src', result['image_1']);
+	                        } else {
+	                            $('#img1Container').remove();
+	                        }
+	                        if (result['image_2'] != '') {
+	                            $(".img2").attr('src', result['image_2']);
+	                        } else {
+	                            $('#img2Container').remove();
+	                        }
+	                        if (result['image_3'] != '') {
+	                            $(".img3").attr('src', result['image_3']);
+	                        } else {
+	                            $('#img3Container').remove();
+	                        }
+	                        if (result['image_4'] != '') {
+	                            $(".img4").attr('src', result['image_4']);
+	                        } else {
+	                            $('#img4Container').remove();
+	                        }
+	                    }
+	                }
+	            });
+	        }
+	    </script>
+
+	    <script src="./assets/lib/owlcarousel/owl.carousel.min.js"></script>
+
+	    <script>
+	        $('.owl-carousel').owlCarousel({
+	            loop: false,
+	            center: false,
+	            margin: 10,
+	            nav: false,
+	            responsive: {
+	                0: {
+	                    items: 1
+	                },
+	                600: {
+	                    items: 3
+	                },
+	                1000: {
+	                    items: 3
+	                }
+	            }
+	        })
+	    </script>
+	</body>
+
+	</html>

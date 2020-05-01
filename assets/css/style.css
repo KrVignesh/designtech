@@ -141,7 +141,7 @@ h6 {
 
 #header #logo {
     float: left;
-    margin-top: 5px;
+    /* margin-top: 5px; */
 }
 
 @media (min-width: 1024px) {
